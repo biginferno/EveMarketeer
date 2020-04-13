@@ -1,11 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/market.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Station.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Amarr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Dodixie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Hek.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Jita.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Rens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZbF4qxT6rfJ0EVSxStKIZsUgkR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ryan Romero\WebstormProjects\evewebsite\src\Components\Stations" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.market.js">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="AXIOS.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" working-dir="$PROJECT_DIR$/src/Components/EveMarketFunctions">
+      <method v="2" />
+    </configuration>
+    <configuration name="axiostest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Components/EveMarketFunctions/axiostest.js" working-dir="$PROJECT_DIR$/src/Components/EveMarketFunctions">
+      <method v="2" />
+    </configuration>
+    <configuration name="market.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Components/EveMarketFunctions/market.js" working-dir="$PROJECT_DIR$/src/Components/EveMarketFunctions">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.market.js" />
+        <item itemvalue="Node.js.AXIOS.js" />
+        <item itemvalue="Node.js.axiostest.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="" />
+      <created>1585099698008</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585099698008</updated>
+      <workItem from="1585099699752" duration="1273000" />
+      <workItem from="1585159598428" duration="13062000" />
+      <workItem from="1585194551120" duration="2035000" />
+      <workItem from="1585265740702" duration="8588000" />
+      <workItem from="1585467448988" duration="1164000" />
+      <workItem from="1585521263156" duration="4033000" />
+      <workItem from="1585596327830" duration="3552000" />
+      <workItem from="1585706817082" duration="4186000" />
+      <workItem from="1586812334340" duration="2240000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="270" y="72" key="CommitChangelistDialog2" timestamp="1586817411425">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586817411425" />
+    <state width="628" height="271" key="GridCell.Tab.0.bottom" timestamp="1585715580520">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="628" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580520" />
+    <state width="628" height="271" key="GridCell.Tab.0.center" timestamp="1585715580519">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="628" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
+    <state width="628" height="271" key="GridCell.Tab.0.left" timestamp="1585715580519">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="628" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
+    <state width="628" height="271" key="GridCell.Tab.0.right" timestamp="1585715580519">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="628" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
   </component>
 </project>

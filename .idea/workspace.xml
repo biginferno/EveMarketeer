@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Station.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Station.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/market.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -100,6 +102,7 @@
       <workItem from="1586812334340" duration="3898000" />
       <workItem from="1586942609865" duration="1523000" />
       <workItem from="1587927967774" duration="1856000" />
+      <workItem from="1587936119255" duration="3556000" />
     </task>
     <task id="LOCAL-00001" summary="Preliminary">
       <created>1586819853265</created>
@@ -123,21 +126,25 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586819852530" />
-    <state width="628" height="271" key="GridCell.Tab.0.bottom" timestamp="1586944263949">
-      <screen x="0" y="0" width="2560" height="1080" />
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom" timestamp="1587936174543">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587936174543" />
     <state width="628" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="628" height="271" key="GridCell.Tab.0.center" timestamp="1586944263949">
-      <screen x="0" y="0" width="2560" height="1080" />
+    <state width="1515" height="203" key="GridCell.Tab.0.center" timestamp="1587936174543">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587936174543" />
     <state width="628" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="628" height="271" key="GridCell.Tab.0.left" timestamp="1586944263949">
-      <screen x="0" y="0" width="2560" height="1080" />
+    <state width="1515" height="203" key="GridCell.Tab.0.left" timestamp="1587936174543">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587936174543" />
     <state width="628" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="628" height="271" key="GridCell.Tab.0.right" timestamp="1586944263949">
-      <screen x="0" y="0" width="2560" height="1080" />
+    <state width="1515" height="203" key="GridCell.Tab.0.right" timestamp="1587936174543">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587936174543" />
     <state width="628" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
     <state x="239" y="293" key="Vcs.Push.Dialog.v2" timestamp="1586823928391">
       <screen x="0" y="0" width="2560" height="1080" />

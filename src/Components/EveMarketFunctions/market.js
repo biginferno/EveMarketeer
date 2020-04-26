@@ -11,9 +11,9 @@ function eveInfo() {
 
     var strr = [];
     axios.get(` https://esi.evetech.net/latest/markets/groups/?datasource=tranquility`)
-        .then(function(response){
+        .then(function(json){
 
-            strr.push(response.data);
+            strr.push(json.data);
             return strr;
         })
 

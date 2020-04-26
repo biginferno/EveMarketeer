@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/market.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Station.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Amarr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Dodixie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Hek.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Jita.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Stations/Rens.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Station.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Station.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +48,7 @@
       <recent name="C:\Users\Ryan Romero\WebstormProjects\evewebsite\src\Components\Stations" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.market.js">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -112,33 +97,51 @@
       <workItem from="1585521263156" duration="4033000" />
       <workItem from="1585596327830" duration="3552000" />
       <workItem from="1585706817082" duration="4186000" />
-      <workItem from="1586812334340" duration="2240000" />
+      <workItem from="1586812334340" duration="3898000" />
+      <workItem from="1586942609865" duration="1523000" />
+      <workItem from="1587927967774" duration="1856000" />
     </task>
+    <task id="LOCAL-00001" summary="Preliminary">
+      <created>1586819853265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586819853265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Preliminary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preliminary" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="270" y="72" key="CommitChangelistDialog2" timestamp="1586817411425">
+    <state x="270" y="72" key="CommitChangelistDialog2" timestamp="1586819852530">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586817411425" />
-    <state width="628" height="271" key="GridCell.Tab.0.bottom" timestamp="1585715580520">
+    <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586819852530" />
+    <state width="628" height="271" key="GridCell.Tab.0.bottom" timestamp="1586944263949">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="628" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580520" />
-    <state width="628" height="271" key="GridCell.Tab.0.center" timestamp="1585715580519">
+    <state width="628" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
+    <state width="628" height="271" key="GridCell.Tab.0.center" timestamp="1586944263949">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="628" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
-    <state width="628" height="271" key="GridCell.Tab.0.left" timestamp="1585715580519">
+    <state width="628" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
+    <state width="628" height="271" key="GridCell.Tab.0.left" timestamp="1586944263949">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="628" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
-    <state width="628" height="271" key="GridCell.Tab.0.right" timestamp="1585715580519">
+    <state width="628" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
+    <state width="628" height="271" key="GridCell.Tab.0.right" timestamp="1586944263949">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="628" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1585715580519" />
+    <state width="628" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
+    <state x="239" y="293" key="Vcs.Push.Dialog.v2" timestamp="1586823928391">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="239" y="293" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1586823928391" />
   </component>
 </project>

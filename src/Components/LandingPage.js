@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import UsersComponent from "./EveMarketFunctions/AXIOS";
+import MainCollection from "./EveMarketFunctions/AXIOS";
 
 class LandingPage extends Component {
     render() {
@@ -15,7 +15,7 @@ class LandingPage extends Component {
                         
                     </div>
                     {/*TODO: fill in later*/}
-                    <UsersComponent/>
+                    <MainCollection/>
                     <div>
 
                     </div>

@@ -1,5 +1,8 @@
 import React, {Component} from "react";
+import StationBuySellFunctions from "./StationBuySellFunctions";
+import {itemID} from "./AxiosCalls"
 const axios = require('axios').default;
+
 
 //Eve ID
 //Jita
@@ -31,20 +34,24 @@ class MainCollection extends Component {
             buyID: [],
             sellID:[],
             acceptableID:[],
-            done: false
+            buyDone: false,
+            sellDone: false
         }
     }
     componentDidMount() {
         // current_region = current_buy_region;
-        let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=1`;
-        let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=1`;
-        axios.get(region_buy_id)
-            .then(json => this.setState({ buyID: json.data}));
+        // let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=1`;
+        // let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=1`;
+        // axios.get(region_buy_id)
+        //     .then(json => this.setState({ buyID: json.data, buyDone: true}));
+        //
+        //
+        // axios.get(region_sell_id)
+        //     .then(json => this.setState({ sellID: json.data, sellDone: true}))
+        let finalList = [];
+        itemID(finalList);
+        console.log(finalList);
 
-
-        axios.get(region_sell_id)
-            .then(json => this.setState({ sellID: json.data}))
-            .then(this.produceAcceptableOrders())
     }
     produceAcceptableOrders(){
         let intersection = this.state.buyID.filter(x => this.state.sellID.includes(x));
@@ -60,16 +67,16 @@ class MainCollection extends Component {
         )
     }
     render() {
-        if(!this.state.done) {
+        if(!(this.state.buyDone && this.state.sellDone)) {
             return (
+                //Show previous
                 <div>
                     Users Loading
                 </div>
             )
         } else {
             return (
-                <div>{this.state.acceptableID}
-                </div>
+                <StationBuySellFunctions sellID = {this.state.sellID} buyID = {this.state.buyID}/>
                 // <div>
                 //
                 //     Users: {this.state.users}

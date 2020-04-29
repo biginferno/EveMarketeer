@@ -48,24 +48,31 @@ class MainCollection extends Component {
         //
         // axios.get(region_sell_id)
         //     .then(json => this.setState({ sellID: json.data, sellDone: true}))
-        let finalList = [];
-        itemID(finalList);
-        console.log(finalList);
+        let buyList = [];
+        let sellList = [];
+        this.setState({buyDone: itemID(buyList, current_buy_region)});
+        let acceptableID = [];
 
+        this.setState({sellDone: itemID(sellList, current_sell_region)});
+        // console.log(buyList.length);
+        // for(let i = 0; i < buyList.length; i++){
+        //     for(let j = 0; j < buyList[i].length; j++){
+        //             console.log("Here");
+        //             acceptableID.push(buyList[i][j]);
+        //
+        //     }
+        // }
+        // const acc =  buyList.flat(1);
+        // console.log(sellList.length);
+        // console.log("Flat Array",acceptableID);
+        console.log("sellList",sellList);
+
+        // let intersection = buyList.filter(x => sellList.includes(x));
+        // console.log("Intersection ", intersection);
+        this.setState({buyID: buyList, sellID: sellList});
+        console.log("SellID", this.state.sellID);
     }
-    produceAcceptableOrders(){
-        let intersection = this.state.buyID.filter(x => this.state.sellID.includes(x));
-        this.setState({acceptableID: intersection});
-    }
-    returnUsers(){
-        let string = '';
-        this.state.itemID.forEach(item => string += `<div>`+ item + '</div>');
-        return(
-            <div>
-                {string}
-            </div>
-        )
-    }
+
     render() {
         if(!(this.state.buyDone && this.state.sellDone)) {
             return (

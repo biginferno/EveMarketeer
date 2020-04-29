@@ -16,6 +16,7 @@ class StationBuySellFunctions extends Component {
     componentDidMount(){
         let buyID = this.props.buyID;
         let sellID = this.props.sellID;
+        console.log("Buy ID",buyID);
         // console.log(buyID.length);
         let intersection = buyID.filter(x => sellID.includes(x));
         this.setState({acceptableID: intersection, done:true});
@@ -33,7 +34,7 @@ class StationBuySellFunctions extends Component {
         else
             {
                 return (
-                    <div>{console.log("This is our correct one ", this.state.acceptableID)}</div>
+                    <div>Loaded{console.log("This is our correct one ", this.state.acceptableID)}</div>
 
                 )
             }

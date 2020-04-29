@@ -13,15 +13,16 @@ let current_buy_region = jita_region;
 let current_sell_region = amarr_region;
 
 
-export function itemID(finalList){
+export  function itemID(finalList, region, finished){
 
     let pages = 0;
     let currentPage = 1;
-    let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
+    let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
     // let json = await axios.get(region_buy_id);
-    axios.get(region_buy_id)
+    axios
+        .get(region_buy_id)
         .then(json => {
-            pages= json.headers['x-pages'];
+            pages = json.headers['x-pages'];
 
             finalList.push(json.data);
             currentPage++;
@@ -36,12 +37,21 @@ export function itemID(finalList){
                         finalList.push(json.data);
 
                     });
+
                 currentPage++;
 
             }
             // return finalList;
+        })
+        .then(function () {
+            return true;
+        })
+        .catch((error) => {
+            //Handle Errors
         });
-    console.log(currentPage);
+
+    // return true;
+    // console.log(currentPage);
 
 
 

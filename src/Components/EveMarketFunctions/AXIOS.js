@@ -39,91 +39,99 @@ class MainCollection extends Component {
         }
     }
     componentDidMount() {
-        // current_region = current_buy_region;
-        // let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=1`;
-        // let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=1`;
-        // axios.get(region_buy_id)
-        //     .then(json => this.setState({ buyID: json.data, buyDone: true}));
-        //
-        //
-        // axios.get(region_sell_id)
-        //     .then(json => this.setState({ sellID: json.data, sellDone: true}))
-
+        let buyList = [];
+        let  sellList = [];
         let pages = 0;
         let currentPage = 1;
         let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
 
-        // axios
-        //     .get(region_buy_id)
-        //     .then(json => {
-        //         pages = json.headers['x-pages'];
-        //
-        //         this.state.buyID.push(json.data);
-        //         currentPage++;
-        //         // console.log(currentPage);
-        //         while(currentPage <= pages) {
-        //             // console.log(currentPage);
-        //             let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
-        //             axios.get(region_buy_id)
-        //
-        //                 .then((json) => {
-        //
-        //                     this.state.buyID.push(json.data);
-        //
-        //                 });
-        //
-        //             currentPage++;
-        //
-        //         }
-        //         // return finalList;
-        //     })
-        //     .then(() => {
-        //         this.setState({buyDone: true});
-        //     })
-        //     .catch((error) => {
-        //         //Handle Errors
-        //     });
+        axios
+            .get(region_buy_id)
+            .then(json => {
+                pages = json.headers['x-pages'];
+                // Array.prototype.push.apply(buyList, json.data);
+                // console.log("here", json.data.valueOf(0));
+                for(let k in Object.values(json.data)){
+                    // console.log("Type",typeof(k));
+                    buyList.push(json.data[k]);
+                }
+                // let values = Object.values(Object.values(json.data));
+
+                console.log("Object Keys", buyList);
+                currentPage++;
+                // console.log(currentPage);
+                while(currentPage <= pages) {
+                    // console.log(buyList[1].length)
+                    // console.log(currentPage);
+                    let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
+                    axios
+                        .get(region_buy_id)
+                        .then((json) => {
+                            for(let k in Object.keys(json.data)){
+                                buyList.push(json.data[k]);
+                            }
+                            // let value =  Object.values(Object.values(json.data));
+                            // console.log("Object Type", typeof (value));
+
+                            // buyList.push(value);
+                            // console.log("Type",typeof(json.data))
+                        });
+                    currentPage++;
+                }
+                // return finalList;
+            })
+            .then(() => {
+
+                this.setState({buyID:buyList, buyDone: true});
+            })
+            .catch((error) => {
+                //Handle Errors
+            });
 
 
-        // pages = 0;
-        // currentPage = 1;
-        // let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${currentPage}`;
-        // // let json = await axios.get(region_buy_id);
-        // axios
-        //     .get(region_sell_id)
-        //     .then(json => {
-        //         pages = json.headers['x-pages'];
-        //         this.state.sellID.push(json.data);
-        //         currentPage++;
-        //         // console.log(currentPage);
-        //         while(currentPage <= pages) {
-        //             // console.log(currentPage);
-        //             let region_buy_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${currentPage}`;
-        //             axios.get(region_buy_id)
-        //                 .then((json) => {
-        //                     this.state.sellID.push(json.data);
-        //                 });
-        //             currentPage++;
-        //         }
-        //         // return finalList;
-        //     })
-        //     .then(() => {
-        //         // console.log("Setting Sell Done");
-        //         this.setState({sellDone: true});
-        //
-        //     })
-        //
-        //
-        //     .catch((error) => {
-        //         //Handle Errors
-        //     });
-        let buyList = [];
-        let sellList = [];
+        let sell_pages = 0;
+        let sell_page = 1;
+        let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${sell_page}`;
+        // let json = await axios.get(region_buy_id);
+        axios
+            .get(region_sell_id)
+            .then(json => {
+                sell_pages = json.headers['x-pages'];
+                for(let k in Object.keys(json.data)){
+                    sellList.push(json.data[k]);
+                }
+                sell_page++;
+                // console.log(currentPage);
+                while(sell_page <= pages) {
+                    // console.log(sellList.length)
+                    // console.log(currentPage);
+                    let region_buy_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${sell_page}`;
+                    axios.get(region_buy_id)
+                        .then((json) => {
+                            for(let k in Object.keys(json.data)){
+                                sellList.push(json.data[k]);
+                            }
+                        });
+                    sell_page++;
+                }
+                // return finalList;
+            })
+            .then(() => {
+                // console.log("Setting Sell Done");
+                this.setState({sellID:sellList, sellDone: true});
+
+            })
+
+
+            .catch((error) => {
+                //Handle Errors
+            });
+
         // this.setState({buyDone: itemID(buyList, current_buy_region)});
         let acceptableID = [];
 
-        this.setState({buyDone:itemID(this.state.buyID, current_buy_region)});
-        this.setState({sellDone:itemID(this.state.sellID, current_sell_region)});
+        // this.setState({buyDone: itemID(this.state.buyID, current_buy_region)});
+        // this.setState({sellDone:itemID(this.state.sellID, current_sell_region)});
         // this.setState({sellDone: itemID(sellList, current_sell_region)});
         // console.log(buyList.length);
         // for(let i = 0; i < buyList.length; i++){
@@ -158,7 +166,7 @@ class MainCollection extends Component {
             )
         } else {
             // console.log("Sell done", this.state.sellDone);
-            // console.log("Buy done", this.state.buyDone);
+            // console.log("Buy done", this.state.buyID);
             return (
                 <StationBuySellFunctions sellID = {this.state.sellID} buyID = {this.state.buyID}/>
                 // <div>

@@ -13,44 +13,35 @@ let current_buy_region = jita_region;
 let current_sell_region = amarr_region;
 
 
-export  function itemID(finalList, region, finished){
-
+export function itemID(finalList, region){
+    // console.log("Finished", finished);
     let pages = 0;
     let currentPage = 1;
     let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
-    // let json = await axios.get(region_buy_id);
+
     axios
         .get(region_buy_id)
         .then(json => {
             pages = json.headers['x-pages'];
 
-            finalList.push(json.data);
+            Array.prototype.push.apply(finalList, json.data);
             currentPage++;
             // console.log(currentPage);
             while(currentPage <= pages) {
                 // console.log(currentPage);
-                let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
+                let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
                 axios.get(region_buy_id)
-
                     .then((json) => {
-
-                        finalList.push(json.data);
-
+                        Array.prototype.push.apply(finalList, json.data);
                     });
-
                 currentPage++;
-
             }
-            // return finalList;
-        })
-        .then(function () {
-            return true;
         })
         .catch((error) => {
             //Handle Errors
         });
 
-    // return true;
+    return true;
     // console.log(currentPage);
 
 
@@ -58,4 +49,25 @@ export  function itemID(finalList, region, finished){
 }
 function concatenateItemID(finalList, data){
     finalList.concat(data);
+}
+
+export function marketInfo(itemID, orderType,region){
+    let station = 0;
+    switch(region){
+        case 10000002:
+            orderType = 'buy';
+            station = jita_station;
+            break;
+        case 10000043:
+            orderType = 'sell';
+            station=amarr_station;
+            break;
+        default:
+            break;
+    }
+
+    const marketBuyOp = `https://esi.evetech.net/v1/markets/${region}/orders/?datasource=tranquility&order_type=${orderType}&page=1&type_id=${itemID}`;
+
+
+
 }

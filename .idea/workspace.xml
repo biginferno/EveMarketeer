@@ -4,7 +4,8 @@
     <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AxiosCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AxiosCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/StationBuySellFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/StationBuySellFunctions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="C:\Users\Ryan Romero\WebstormProjects\evewebsite\src\Components\Stations" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.AXIOS.js">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -102,6 +103,7 @@
       <workItem from="1586942609865" duration="1523000" />
       <workItem from="1587927967774" duration="1856000" />
       <workItem from="1587936119255" duration="5988000" />
+      <workItem from="1588197998029" duration="6848000" />
     </task>
     <task id="LOCAL-00001" summary="Preliminary">
       <created>1586819853265</created>
@@ -133,30 +135,34 @@
     </state>
     <state x="162" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1587943887357" />
     <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586819852530" />
-    <state width="1515" height="203" key="GridCell.Tab.0.bottom" timestamp="1587951373601">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1269" height="271" key="GridCell.Tab.0.bottom" timestamp="1588202631193">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="628" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="1515" height="203" key="GridCell.Tab.0.center" timestamp="1587951373601">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1269" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1269" height="271" key="GridCell.Tab.0.center" timestamp="1588202631193">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="628" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="1515" height="203" key="GridCell.Tab.0.left" timestamp="1587951373601">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1269" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1269" height="271" key="GridCell.Tab.0.left" timestamp="1588202631193">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="628" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
-    <state width="1515" height="203" key="GridCell.Tab.0.right" timestamp="1587951373601">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1269" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1269" height="271" key="GridCell.Tab.0.right" timestamp="1588202631193">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="628" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1586944263949" />
+    <state width="1269" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
     <state x="143" y="234" key="Vcs.Push.Dialog.v2" timestamp="1587943894607">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="143" y="234" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1587943894607" />
     <state x="239" y="293" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1586823928391" />
+    <state x="998" y="313" key="git4idea.merge.GitPullDialog" timestamp="1588190635512">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="998" y="313" key="git4idea.merge.GitPullDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1588190635512" />
   </component>
 </project>

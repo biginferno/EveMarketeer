@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import StationBuySellFunctions from "./StationBuySellFunctions";
-import {itemID} from "./AxiosCalls"
+// import {itemID} from "./AxiosCalls"
 const axios = require('axios').default;
 
 
@@ -38,119 +38,56 @@ class MainCollection extends Component {
             sellDone: false
         }
     }
-    componentDidMount() {
-        let buyList = [];
-        let  sellList = [];
+    async itemID(region){
+        let finalList = [];
         let pages = 0;
         let currentPage = 1;
-        let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
+        let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
 
-        axios
+        await axios
             .get(region_buy_id)
             .then(json => {
                 pages = json.headers['x-pages'];
-                // Array.prototype.push.apply(buyList, json.data);
-                // console.log("here", json.data.valueOf(0));
                 for(let k in Object.values(json.data)){
-                    // console.log("Type",typeof(k));
-                    buyList.push(json.data[k]);
+                    finalList.push(json.data[k]);
                 }
-                // let values = Object.values(Object.values(json.data));
-
-                console.log("Object Keys", buyList);
                 currentPage++;
-                // console.log(currentPage);
-                while(currentPage <= pages) {
-                    // console.log(buyList[1].length)
-                    // console.log(currentPage);
-                    let region_buy_id = `https://esi.evetech.net/latest/markets/${current_buy_region}/types/?datasource=tranquility&page=${currentPage}`;
-                    axios
-                        .get(region_buy_id)
-                        .then((json) => {
-                            for(let k in Object.keys(json.data)){
-                                buyList.push(json.data[k]);
-                            }
-                            // let value =  Object.values(Object.values(json.data));
-                            // console.log("Object Type", typeof (value));
-
-                            // buyList.push(value);
-                            // console.log("Type",typeof(json.data))
-                        });
-                    currentPage++;
-                }
-                // return finalList;
-            })
-            .then(() => {
-
-                this.setState({buyID:buyList, buyDone: true});
-            })
-            .catch((error) => {
-                //Handle Errors
             });
+        while(currentPage <= pages) {
+            let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
+            await axios
+                .get(region_buy_id)
+                .then((json) => {
+                    for(let k in Object.keys(json.data)){
+                        finalList.push(json.data[k]);
+                    }
+                });
+            currentPage++;
+        }
+
+        switch(region) {
+            case jita_region:
+                this.setState({buyID: finalList, buyDone: true});
+                break;
+            case amarr_region:
+                this.setState({sellID: finalList, sellDone: true});
+                break;
+            default:
+                break;
+        }
 
 
-        let sell_pages = 0;
-        let sell_page = 1;
-        let region_sell_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${sell_page}`;
-        // let json = await axios.get(region_buy_id);
-        axios
-            .get(region_sell_id)
-            .then(json => {
-                sell_pages = json.headers['x-pages'];
-                for(let k in Object.keys(json.data)){
-                    sellList.push(json.data[k]);
-                }
-                sell_page++;
-                // console.log(currentPage);
-                while(sell_page <= pages) {
-                    // console.log(sellList.length)
-                    // console.log(currentPage);
-                    let region_buy_id = `https://esi.evetech.net/latest/markets/${current_sell_region}/types/?datasource=tranquility&page=${sell_page}`;
-                    axios.get(region_buy_id)
-                        .then((json) => {
-                            for(let k in Object.keys(json.data)){
-                                sellList.push(json.data[k]);
-                            }
-                        });
-                    sell_page++;
-                }
-                // return finalList;
-            })
-            .then(() => {
-                // console.log("Setting Sell Done");
-                this.setState({sellID:sellList, sellDone: true});
-
-            })
+    }
+    componentDidMount() {
+        let buyList = [];
+        let  sellList = [];
 
 
-            .catch((error) => {
-                //Handle Errors
-            });
 
-        // this.setState({buyDone: itemID(buyList, current_buy_region)});
-        let acceptableID = [];
+        this.itemID(jita_region);
+        this.itemID(amarr_region);
 
-        // this.setState({buyDone: itemID(this.state.buyID, current_buy_region)});
-        // this.setState({sellDone:itemID(this.state.sellID, current_sell_region)});
-        // this.setState({sellDone: itemID(sellList, current_sell_region)});
-        // console.log(buyList.length);
-        // for(let i = 0; i < buyList.length; i++){
-        //     for(let j = 0; j < buyList[i].length; j++){
-        //             console.log("Here");
-        //             acceptableID.push(buyList[i][j]);
-        //
-        //     }
-        // }
-        // const acc =  buyList.flat(1);
-        // console.log(sellList.length);
-        // console.log("Flat Array",acceptableID);
-        // console.log("sellList",sellList);
-        // this.setState({sellDone: itemID(sellList, current_sell_region)});
 
-        // let intersection = buyList.filter(x => sellList.includes(x));
-        // console.log("Intersection ", intersection);
-        // this.setState({buyID: buyList, sellID: sellList});
-        // console.log("SellID", this.state.sellID);
     }
 
     render() {
@@ -179,3 +116,27 @@ class MainCollection extends Component {
 }
 
 export default MainCollection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

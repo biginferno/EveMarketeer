@@ -13,7 +13,7 @@ let current_buy_region = jita_region;
 let current_sell_region = amarr_region;
 
 
-export async function itemID(finalList, region){
+async function itemID(finalList, region){
     // console.log("Finished", finished);
     let pages = 0;
     let currentPage = 1;
@@ -34,7 +34,7 @@ export async function itemID(finalList, region){
                 axios.get(region_buy_id)
                     .then((json) => {
                         Array.prototype.push.apply(finalList, json.data);
-                        console.log(finalList[0]);
+                        // console.log(finalList[0]);
 
                     });
                 currentPage++;
@@ -51,7 +51,7 @@ function concatenateItemID(finalList, data){
     finalList.concat(data);
 }
 
-export function marketInfo(itemID, orderType,region){
+export function marketInfo(itemID, orderType, region){
     let station = 0;
     switch(region){
         case 10000002:

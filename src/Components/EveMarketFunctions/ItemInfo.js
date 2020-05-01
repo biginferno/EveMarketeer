@@ -1,33 +1,55 @@
 
-export function ItemInfo(buy_info, sell_info) {
-    let final_list = [];
-    buy_info.sort(function(a,b){
-        return a["price"] - b["price"];
-    });
-    sell_info.sort(function(a,b){
-        return b["price"] - a["price"];
-    });
-    console.log(buy_info);
-    // console.log("Buy Info",buy_info);
-    // console.log("Sell Info",sell_info);
-    // this.init = function() {
-    final_list = profit_quantity_calculator(buy_info,sell_info)
-    console.log(final_list);
-    let quantity = final_list[0];
-    let total_profit = final_list[1];
+// export function ItemInfo(buy_info, sell_info) {
+//     let final_list = [];
+//     buy_info.sort(function(a,b){
+//         return a["price"] - b["price"];
+//     });
+//     sell_info.sort(function(a,b){
+//         return b["price"] - a["price"];
+//     });
+//     // console.log(buy_info);
+//     // console.log("Buy Info",buy_info);
+//     // console.log("Sell Info",sell_info);
+//     // this.init = function() {
+//     final_list = profit_quantity_calculator(buy_info,sell_info)
+//     // console.log(final_list);
+//     let quantity = final_list[0];
+//     let total_profit = final_list[1];
+//     // }
+//     function returnFinalList(){
+//         return final_list;
+//     }
+//     function returnTypeID(){
+//         return buy_info[0]["type_id"];
+//     }
+//     function returnQuantity(){
+//         return quantity;
+//     }
+//     function returnTotalProfit(){
+//         return total_profit;
+//     }
+// }
+export class Item {
+    constructor(buy_info, sell_info){
+        this.buy_info = buy_info;
+        this.sell_info = sell_info;
+
+        this.info = profit_quantity_calculator(buy_info, sell_info);
+
+    }
+
+    returnFinalList(){
+        return this.info;
+    }
+    returnTypeID(){
+        return this.info[0]["type_id"];
+    }
+    // returnQuantity(){
+    //     return quantity;
     // }
-    function returnFinalList(){
-        return final_list;
-    }
-    function returnTypeID(){
-        return buy_info[0]["type_id"];
-    }
-    function returnQuantity(){
-        return quantity;
-    }
-    function returnTotalProfit(){
-        return total_profit;
-    }
+    // returnTotalProfit(){
+    //     return total_profit;
+    // }
 }
 
 function profit_quantity_calculator(jita_sellable, amarr_buyable){

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {ItemInfo} from "./ItemInfo";
+import {Item} from "./ItemInfo";
 const axios = require('axios').default;
 
 //Jita
@@ -25,7 +25,7 @@ class StationBuySellFunctions extends Component {
     }
 
     componentDidMount(){
-        this.setState({buy_id:this.props.buyID, sell_id:this.props.sellID);
+        this.setState({buy_id:this.props.buyID, sell_id:this.props.sellID});
 
     }
     componentDidUpdate(prevProps, prevState, snapshot)
@@ -34,10 +34,7 @@ class StationBuySellFunctions extends Component {
             this.setState({buy_id: this.props.buyID, sell_id:this.props.sellID});
             console.log("Updating");
             this.createAcceptableID(this.state.buy_id, this.state.sell_id);
-            // this.state.acceptableID.forEach(function(item){
-            //     console.log(item);
-            //     marketInfo(jita_region,item);
-            // });
+
 
 
         }
@@ -90,37 +87,47 @@ class StationBuySellFunctions extends Component {
                         sell_orders.push(json.data[k]);
                 }
             });
-
-        return new ItemInfo(buy_orders, sell_orders);
+        // let info = new ItemInfo(buy_orders, sell_orders);
+        // console.log("Info ",info);
+        return new Item(buy_orders,sell_orders);
     }
 
 
 
     createAcceptableID(buy_id, sell_id) {
-        // buy_id.forEach(element => console.log(element));
-        // console.log("Object Type", typeof (buy_id));
-        // console.log("Object Length", buy_id.length);
-        // console.log("Object Keys", Object.keys(buy_id));
-        // console.log("Object values", Object.values(buy_id));
-        // console.log("Object entries", Object.entries(buy_id));
-        // console.log("Buy object", buy_id);
-        // console.log("Sell Object", sell_id);
         let intersection = buy_id.filter(x => sell_id.includes(x));
         let info = [];
-        console.log(intersection);
+        // console.log(intersection);
         this.setState({acceptableID: intersection});
         for(let i = 0; i < 10; i++) {
             info.push(this.marketInfo(jita_region, intersection[i]));
         }
+        console.log(info);
         this.setState({applicable_orders: info, done: true});
     }
     createHTML(){
-            return(
 
-            <div>
+        let infoStack = this.state.applicable_orders;
+        let str = "";
+        // console.log("here",infoStack);
+        infoStack.forEach(function(item) {
 
-            </div>
-)
+
+            str += "<div className='flip-card'> " +
+                "<div className='flip-card-inner'> " +
+                    '<div className="flip-card-front"> ' +
+                        '<img src="eve_image.jpg" ' +
+                        'alt="Avatar" ' +
+                        'style="width:300px;height:300px;"/> ' +
+                    '</div> ' +
+                    '<div className="flip-card-back"> ' +
+                        `<h1>${item.returnTypeID}</h1> ` +
+                        `<p>${item.returnQuantity}</p> ` +
+                        `<p>${item.returnTotalProfit}</p> ` +
+                    `</div> ` +
+                    `</div> ` +
+                `</div> `;
+        });
     }
     render(){
         if(!(this.state.done)) {
@@ -135,13 +142,7 @@ class StationBuySellFunctions extends Component {
             {
                 return (
                     <div>
-
-
-                            for(let i = 0; i < 5; i++){
-                            }
-
-
-                        }
+                        {this.createHTML()}
                     </div>
 
                 )

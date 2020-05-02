@@ -30,35 +30,56 @@
 //     }
 // }
 export class Item {
-    constructor(buy_info, sell_info){
+    constructor(id,buy_info, sell_info){
+        this.id = id;
         this.buy_info = buy_info;
         this.sell_info = sell_info;
 
-        this.info = profit_quantity_calculator(buy_info, sell_info);
-
+        this.info = profit_quantity_calculator(this.buy_info, this.sell_info);
+        this.quantity = this.info[0];
     }
 
     returnFinalList(){
         return this.info;
     }
     returnTypeID(){
-        return this.info[0]["type_id"];
+        // console.log("Buy info",this.buy_info);
+        return this.id;
     }
+    set setQuantity(q){
+        this.quantity = q;
+    }
+    returnQuantity () {
+        return this.quantity;
+    };
     // returnQuantity(){
     //     return quantity;
     // }
     // returnTotalProfit(){
     //     return total_profit;
     // }
+    createProfit(){
+        this.info = profit_quantity_calculator(this.buy_info, this.sell_info);
+    }
 }
 
 function profit_quantity_calculator(jita_sellable, amarr_buyable){
 
     let length_jita = jita_sellable.length;
     let length_amarr = amarr_buyable.length;
+    jita_sellable.sort(function(a,b){
+        return a["price"] - b["price"];
+    });
+    amarr_buyable.sort(function(a,b){
+        return b["price"] - a["price"];
+    });
+    // console.log(length_amarr)
+    // console.log("Jita Orders", jita_sellable);
+    // console.log("Amarr Orders", amarr_buyable);
     return profit_quantity_calculator_helper(jita_sellable, amarr_buyable, length_jita, length_amarr, 0, 0)
 }
 function profit_quantity_calculator_helper(jita_orders, amarr_sellable, length_jita, length_amarr, quantity, total_profit){
+
     if(length_jita > 0 && length_amarr > 0){
         let jita_quantity = jita_orders[0]['volume_remain'];
         let jita_price = jita_orders[0]['price'];
@@ -112,7 +133,10 @@ function profit_quantity_calculator_helper(jita_orders, amarr_sellable, length_j
             return [quantity, total_profit];
         }
     }
-    else return [quantity, total_profit];
+    else {
+
+        return [quantity, total_profit];
+    }
 }
 
 

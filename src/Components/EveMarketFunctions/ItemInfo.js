@@ -80,7 +80,8 @@ function profit_quantity_calculator(jita_sellable, amarr_buyable){
 }
 function profit_quantity_calculator_helper(jita_orders, amarr_sellable, length_jita, length_amarr, quantity, total_profit){
 
-    if(length_jita > 0 && length_amarr > 0){
+    if(length_jita > 0 && length_amarr > 0) {
+
         let jita_quantity = jita_orders[0]['volume_remain'];
         let jita_price = jita_orders[0]['price'];
         let amarr_quantity = amarr_sellable[0]['volume_remain'];

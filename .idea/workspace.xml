@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="">
+    <list default="true" id="e6878a6e-cc70-4906-9c75-8966311283fd" name="Default Changelist" comment="Base Project Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AXIOS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AxiosCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/AxiosCalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EveMarketFunctions/StationBuySellFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EveMarketFunctions/StationBuySellFunctions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +13,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,6 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\romer\Documents\GitHub\EveMarketeers\src\Components\EveMarketFunctions" />
       <recent name="C:\Users\Ryan Romero\WebstormProjects\evewebsite\src\Components\Stations" />
     </key>
   </component>
@@ -104,6 +104,11 @@
       <workItem from="1587927967774" duration="1856000" />
       <workItem from="1587936119255" duration="5988000" />
       <workItem from="1588197998029" duration="6848000" />
+      <workItem from="1588456172984" duration="253000" />
+      <workItem from="1589854368502" duration="2105000" />
+      <workItem from="1590284068446" duration="998000" />
+      <workItem from="1590433252931" duration="597000" />
+      <workItem from="1591407692108" duration="290000" />
     </task>
     <task id="LOCAL-00001" summary="Preliminary">
       <created>1586819853265</created>
@@ -119,7 +124,35 @@
       <option name="project" value="LOCAL" />
       <updated>1587943888060</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Backend Complete">
+      <created>1588318699785</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588318699785</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Item Error Resolving">
+      <created>1588324591569</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588324591569</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Base Project Complete">
+      <created>1588455357130</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588455357131</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Base Project Complete">
+      <created>1591407860100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591407860100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,38 +160,41 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Preliminary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preliminary" />
+    <MESSAGE value="Backend Complete" />
+    <MESSAGE value="Item Error Resolving" />
+    <MESSAGE value="Base Project Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base Project Complete" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="162" y="0" key="CommitChangelistDialog2" timestamp="1587943887357">
+    <state x="162" y="0" key="CommitChangelistDialog2" timestamp="1591407858930">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="162" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1587943887357" />
+    <state x="162" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1591407858930" />
     <state x="270" y="72" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1586819852530" />
-    <state width="1269" height="271" key="GridCell.Tab.0.bottom" timestamp="1588202631193">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="1269" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
-    <state width="1269" height="271" key="GridCell.Tab.0.center" timestamp="1588202631193">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="1269" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
-    <state width="1269" height="271" key="GridCell.Tab.0.left" timestamp="1588202631193">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="1269" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
-    <state width="1269" height="271" key="GridCell.Tab.0.right" timestamp="1588202631193">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587951373601" />
-    <state width="1269" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
-    <state x="143" y="234" key="Vcs.Push.Dialog.v2" timestamp="1587943894607">
+    <state width="1515" height="142" key="GridCell.Tab.0.bottom" timestamp="1588448264466">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="143" y="234" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1587943894607" />
+    <state width="1515" height="142" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588448264466" />
+    <state width="1269" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1515" height="142" key="GridCell.Tab.0.center" timestamp="1588448264466">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588448264466" />
+    <state width="1269" height="271" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1515" height="142" key="GridCell.Tab.0.left" timestamp="1588448264466">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588448264466" />
+    <state width="1269" height="271" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state width="1515" height="142" key="GridCell.Tab.0.right" timestamp="1588448264466">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588448264466" />
+    <state width="1269" height="271" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1588202631193" />
+    <state x="143" y="234" key="Vcs.Push.Dialog.v2" timestamp="1591407868407">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="143" y="234" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1591407868407" />
     <state x="239" y="293" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1586823928391" />
     <state x="998" y="313" key="git4idea.merge.GitPullDialog" timestamp="1588190635512">
       <screen x="0" y="0" width="2560" height="1080" />

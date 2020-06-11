@@ -75,49 +75,6 @@ class StationBuySellFunctions extends Component {
 
         buy_orders = await this.itemJSON(marketBuyOp, jita_station);
         sell_orders = await this.itemJSON(marketSellOp, amarr_station);
-        // console.log(sell_orders);
-        // await axios
-        //     .get(marketBuyOp)
-        //     .then(json => {
-        //         for(let k in Object.values(json.data)){
-        //             if(json.data[k]["location_id"] === jita_station)
-        //                 buy_orders.push(json.data[k]);
-        //         }
-        //     })
-        //     .then(() => {
-        //         axios
-        //             .get(marketSellOp)
-        //             .then(response => {
-        //                 // console.log("Object values", Object.values(json.data));
-        //                 for(let k in Object.values(response.data)){
-        //                     if(response.data[k]["location_id"] === amarr_station)
-        //                         sell_orders.push(response.data[k]);
-        //                 }
-        //                 // info = new Item(buy_orders, sell_orders);
-        //             })
-        //             .then(() => {
-        //                 console.log("Finished");
-        //                 // return [buy_orders, sell_orders];
-        //             });
-        //     });
-
-        // await axios
-        //     .get(marketSellOp)
-        //     .then(json => {
-        //         // console.log("Object values", Object.values(json.data));
-        //         for(let k in Object.values(json.data)){
-        //             if(json.data[k]["location_id"] === amarr_station)
-        //                 sell_orders.push(json.data[k]);
-        //         }
-        //         // info = new Item(buy_orders, sell_orders);
-        //     })
-        //     .then(() => {
-        //         console.log("Finished");
-        //         // return [buy_orders, sell_orders];
-        //     });
-        // console.log("Buy Orders", buy_orders);
-        // console.log("Sell Orders", sell_orders);
-        // console.log("returning");
         return [buy_orders, sell_orders];
 
 

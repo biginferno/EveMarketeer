@@ -1,5 +1,5 @@
 
-export class Item {
+export default class Item {
     constructor(id,buy_info, sell_info){
         this.id = id;
         this.buy_info = buy_info;
@@ -7,8 +7,11 @@ export class Item {
 
         this.info = profit_quantity_calculator(this.buy_info, this.sell_info);
         this.quantity = this.info[0];
+        this.total_profit = this.info[1];
     }
-
+    returnTotalProfit(){
+        return this.total_profit;
+    }
     returnFinalList(){
         return this.info;
     }
@@ -16,18 +19,12 @@ export class Item {
         // console.log("Buy info",this.buy_info);
         return this.id;
     }
-    set setQuantity(q){
+    setQuantity(q){
         this.quantity = q;
     }
     returnQuantity () {
         return this.quantity;
     };
-    // returnQuantity(){
-    //     return quantity;
-    // }
-    // returnTotalProfit(){
-    //     return total_profit;
-    // }
     createProfit(){
         this.info = profit_quantity_calculator(this.buy_info, this.sell_info);
     }

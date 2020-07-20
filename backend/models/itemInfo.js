@@ -15,4 +15,4 @@ const itemSchema = new Schema({
 
 const ItemInfo = mongoose.model('ItemInfo', itemSchema);
 
-module.exports = ItemInfo;
+module.exports = ItemInfo; 

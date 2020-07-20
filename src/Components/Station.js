@@ -10,7 +10,7 @@ amarr_region_id = 10000043
 class BuyStation extends Component {
     constructor(props) {
         super(props);
-
+        
         this.state= {
             station_id:0,
             region_id:0,

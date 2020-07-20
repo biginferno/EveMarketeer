@@ -41,32 +41,6 @@ class MainCollection extends Component {
     }
     async itemID(region){
         let finalList;
-        let pages = 0;
-        let currentPage = 1;
-        /*
-        let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
-
-        await axios
-            .get(region_buy_id)
-            .then(json => {
-                pages = json.headers['x-pages'];
-                for(let k in Object.values(json.data)){
-                    finalList.push(json.data[k]);
-                }
-                currentPage++;
-            });
-        while(currentPage <= pages) {
-            let region_buy_id = `https://esi.evetech.net/latest/markets/${region}/types/?datasource=tranquility&page=${currentPage}`;
-            await axios
-            .get(region_buy_id)
-            .then((json) => {
-                for(let k in Object.keys(json.data)){
-                    finalList.push(json.data[k]);
-                }
-            });
-            currentPage++;
-        }
-        */
         finalList = await api.getAllItemID(region);
         console.log(finalList.length)
         switch(region) {
@@ -83,15 +57,8 @@ class MainCollection extends Component {
 
     }
     componentDidMount() {
-        let buyList = [];
-        let sellList = [];
-
-
-
         this.itemID(jita_region);
         this.itemID(amarr_region);
-
-
     }
 
     render() {

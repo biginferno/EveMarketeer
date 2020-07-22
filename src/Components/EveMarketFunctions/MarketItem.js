@@ -120,6 +120,9 @@ class MarketItem extends Component {
         let quan = item.returnQuantity().toString();
         let profit = item.returnTotalProfit();
         const icon = `https://images.evetech.net/types/${id}/icon`;
+        if(icon === 404){
+            console.log(icon);
+        } 
         const alt = `eve id ${id}`;
         return ([profit,
             <Card shadow={0} style={{width: '320px', height: '320px', float:"left"}}>

@@ -1,8 +1,13 @@
 import React, {Component} from "react";
 import Station from "../Station";
 
-class Hek extends Station {
+class HekComponent extends Station {
 
+    render() {
+        return(
+            <div>HekComponent</div>
+        )
+    }
 }
 
-export default Hek;
+export default HekComponent;

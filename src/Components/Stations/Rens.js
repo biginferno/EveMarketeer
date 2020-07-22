@@ -1,7 +1,12 @@
 import React, {Component} from "react";
 import Station from "../Station";
 
-class Rens extends Station {
+class RensComponent extends Station {
 
+    render() {
+        return(
+            <div>RensComponent</div>
+        )
+    }
 }
-export default Rens;
+export default RensComponent;

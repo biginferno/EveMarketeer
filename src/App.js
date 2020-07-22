@@ -1,37 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Layout, Header, Navigation, Drawer, Content} from "react-mdl";
-import {Link, Router} from "react-router-dom";
+import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./Components/Main";
 import LandingPage from "./Components/LandingPage";
+import Toolbar from './Components/Toolbar/toolbar'
+import JitaComponent from './Components/Stations/Jita'
+import AmarrComponent from './Components/Stations/Amarr'
+import DodixieComponent from './Components/Stations/Dodixie'
+import RensComponent from './Components/Stations/Rens'
+import HekComponent from './Components/Stations/Hek'
 
 function App() {
   return (
-    <div className="App">
-      {/*<Layout>*/}
-        <Header className="app-header">
-         <Navigation>
-           <Router>
-              <Link className="header-right" to="#">Jita Trades</Link>
-              <Link className="header-right" to="#">Amarr Trades</Link>
-              <Link className="header-right" to="#">Dodixie Trades</Link>
-              <Link className="header-right" to="#">Rens Trades</Link>
-              <Link className="header-right" to="#">Hek Trades</Link>
-            </Router>
-         </Navigation>
-        </Header>
 
-        {/*<Content>*/}
-          <div className="page-content">
-            <LandingPage/>
-          </div>
-        {/*</Content>*/}
-      {/*</Layout>*/}
-      <div className="Footer">
-        Footer
-      </div>
-    </div>
+
+    <Router>
+      <Toolbar />
+      <br />
+
+      {/* <Route path="/" exact component={LandingPage} /> */}
+      <Route path="/" exact component={JitaComponent} />
+      <Route path="/dodixie" component={DodixieComponent} />
+      <Route path="/amarr" component={AmarrComponent} />
+      <Route path="/rens" component={RensComponent} />
+      <Route path="/hek" component={HekComponent} />
+    </Router>
+
+    
   );
 }
 

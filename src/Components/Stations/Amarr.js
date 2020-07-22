@@ -1,9 +1,13 @@
 import React, {Component} from "react";
 import Station from "../Station";
 
-class Amarr extends Station {
+class AmarrComponent extends Station {
 
-
+    render() {
+        return(
+            <div>AmarrComponent</div>
+        )
+    }
 }
 
-export default Amarr;
+export default AmarrComponent;

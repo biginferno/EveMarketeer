@@ -70,7 +70,7 @@ class MarketItem extends Component {
         let item_id = this.state.item_id;
         const marketBuyOp = `https://esi.evetech.net/v1/markets/${jita_region}/orders/?datasource=tranquility&order_type=${'sell'}&page=1&type_id=${item_id}`;
         const marketSellOp = `https://esi.evetech.net/v1/markets/${amarr_region}/orders/?datasource=tranquility&order_type=${'buy'}&page=1&type_id=${item_id}`;
-
+        
         axios
         //Get the Buy/Sell Orders
         .all([
@@ -120,9 +120,7 @@ class MarketItem extends Component {
         let quan = item.returnQuantity().toString();
         let profit = item.returnTotalProfit();
         const icon = `https://images.evetech.net/types/${id}/icon`;
-        if(icon === 404){
-            console.log(icon);
-        } 
+        
         const alt = `eve id ${id}`;
         return ([profit,
             <Card shadow={0} style={{width: '320px', height: '320px', float:"left"}}>

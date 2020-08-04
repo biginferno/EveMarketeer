@@ -21,6 +21,7 @@ function App() {
 
       {/* <Route path="/" exact component={LandingPage} /> */}
       <Route path="/" exact component={JitaComponent} />
+      <Route path="/jita" exact component={JitaComponent} />
       <Route path="/dodixie" component={DodixieComponent} />
       <Route path="/amarr" component={AmarrComponent} />
       <Route path="/rens" component={RensComponent} />

@@ -36,7 +36,7 @@ class MainCollection extends Component {
             sellID:[],
             acceptableID:[],
             buyDone: false,
-            sellDone: false
+            sellDone: false,
         } 
     }
     async itemID(region){
@@ -76,7 +76,9 @@ class MainCollection extends Component {
             // console.log("Sell done", this.state.sellDone);
             // console.log("Buy done", this.state.buyID);
             return (
-                <div width="100%"><StationBuySellFunctions sellID = {this.state.sellID} buyID = {this.state.buyID}/></div>
+                <div width="100%">
+                    <StationBuySellFunctions sellID = {this.state.sellID} buyID = {this.state.buyID}/>
+                </div>
                 
                 // <div>
                 //

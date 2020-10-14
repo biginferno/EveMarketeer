@@ -3,8 +3,7 @@ import MainCollection from "./Main";
 const img = `https://images.evetech.net/types/587/icon`;
 class LandingPage extends Component {
     render() {
-        // console.log(typeof(img));
-        // console.log(img);
+        
         return(
             <div style={{width:'100%',height:'75%', margin:'auto'}}>
                 

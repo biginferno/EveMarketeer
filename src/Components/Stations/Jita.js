@@ -18,6 +18,8 @@ class JitaComponent extends Component {
       all_buy_orders: [],
       all_sell_orders: [],
       items: [],
+
+
       sell_region: 10000043,
       sell_station: 60008494,
 

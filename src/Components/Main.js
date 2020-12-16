@@ -69,7 +69,7 @@ class MainCollection extends Component {
             return (
                 //Show previous
                 <div>
-                    Users Loading
+                    <h1>Users Loading</h1>
                 </div>
             )
         } else {

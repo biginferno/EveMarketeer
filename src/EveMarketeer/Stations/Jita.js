@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import * as api from "../EveMarketFunctions/AXIOS"
 import Item from "../EveMarketFunctions/ItemInfo";
 import { Card, CardTitle, CardText } from "react-mdl";
 const axios = require("axios").default;
@@ -7,7 +6,7 @@ const axios = require("axios").default;
 class JitaComponent extends Component {
   constructor(props) {
     super(props);
-
+ 
     this.state = {
       jita_region: 10000002,
       jita_station: 60003760,

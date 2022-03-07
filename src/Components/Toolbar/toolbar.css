@@ -1,0 +1,38 @@
+.navbar{
+    background-color: #FFF;
+    margin: 0 auto;
+}
+.eve-logo{
+    background-color: #5b4695;
+    border-bottom: 1px solid black;
+
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+.eve-links{
+    background-color: #466995;
+    border-bottom: 1px solid #466995;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+ul{
+    
+    position: relative;
+    
+    margin: auto;
+    /* padding: 20%; */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+li{
+    background-color: black;
+    /* position: absolute; */
+    display: inline-block;
+    height: 100%;
+    /* padding-top: 50%; */
+    width: 15%;
+}

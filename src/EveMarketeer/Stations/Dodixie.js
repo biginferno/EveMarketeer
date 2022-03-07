@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Station from "../Station";
+import Station from "../../Components/Station";
 
 class DodixieComponent extends Station {
 

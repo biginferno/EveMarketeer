@@ -1,13 +1,14 @@
 import  React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './toolbar.css'
 
 export default class Toolbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-                <div className="eve_logo"></div>
-                <div className="eve_links">
+            <nav className="navbar">
+                <div className="eve-logo">Eve Marketeer</div>
+                <div className="eve-links">
                     <ul>
                         <li><Link to="/jita">Jita Info </Link></li>
                         <li><Link to="/amarr">Amarr Info </Link></li>

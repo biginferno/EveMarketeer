@@ -6,7 +6,6 @@ const axios = require("axios").default;
 class JitaComponent extends Component {
   constructor(props) {
     super(props);
- 
     this.state = {
       jita_region: 10000002,
       jita_station: 60003760,
@@ -33,14 +32,12 @@ class JitaComponent extends Component {
     let jita = this.state.jita_region;
     let sell = this.state.sell_region;
     await this.getAllMarketOrders(jita, "sell").then((response) => {
-      // console.log("Buy Response");
       this.setState({
         all_buy_orders: response,
         buy_done: true,
       });
     });
     await this.getAllMarketOrders(sell, "buy").then((response) => {
-      // console.log("Sell Response");
       this.setState({
         all_sell_orders: response,
         sell_done: true,
@@ -53,7 +50,6 @@ class JitaComponent extends Component {
     let sell_orders = this.state.all_sell_orders;
     let buy_orders = this.state.all_buy_orders;
     let item_list = [];
-
     let jita_station = this.state.jita_station;
     let amarr_station = this.state.amarr_station;
 
@@ -99,7 +95,13 @@ class JitaComponent extends Component {
         while (next_buy_id < current_id) {
           if (buy_orders.length > 0) {
             buy_orders.shift();
-            next_buy_id = buy_orders[0]["type_id"];
+            try{
+              next_buy_id = buy_orders[0]["type_id"];
+            }
+            catch{
+              console.log(buy_orders[0])
+            }
+            
           } else break;
         }
       }
@@ -120,14 +122,11 @@ class JitaComponent extends Component {
         }
         //Option 3 we don't do anything because we need to move on with the sell_orders, these buy_orders could be used later
       }
-      //   console.log("so far so good")
       if (current_buy_orders.length > 0 && current_sell_orders.length > 0) {
         item_list.push(
           new Item(current_id, current_buy_orders, current_sell_orders)
         );
-        // console.log("created item");
       } else {
-        // console.log("No good");
       }
     }
     return item_list;
@@ -142,7 +141,6 @@ class JitaComponent extends Component {
     }
     if (prevState.sorted !== this.state.sorted && this.state.sorted === true) {
       let item_list = this.trimmingFunction();
-
       this.setState({
         items: item_list,
         trimmed: true,
@@ -154,9 +152,7 @@ class JitaComponent extends Component {
     let pages = 0;
     let currentPage = 1;
     console.log(`Starting ${type} process`);
-
     let region_buy_id = `https://esi.evetech.net/v1/markets/${region}/orders/?datasource=tranquility&order_type=${type}&page=${currentPage}`;
-    // console.log("starting")
     await axios.get(region_buy_id).then((json) => {
       pages = json.headers["x-pages"];
       console.log("Pages", pages);
@@ -168,33 +164,17 @@ class JitaComponent extends Component {
     while (currentPage <= pages) {
       let region_buy_id = `https://esi.evetech.net/v1/markets/${region}/orders/?datasource=tranquility&order_type=${type}&page=${currentPage}`;
       await axios.get(region_buy_id).then((json) => {
-        // console.log("Current Pages ", currentPage, "of Type ",type)
         for (let k in Object.keys(json.data)) {
           finalList.push(json.data[k]);
         }
       });
       currentPage++;
     }
-    // if(type === "sell"){
-    //     console.log("FinalList: ",finalList)
-    //     this.setState=({
-    //         all_buy_orders:finalList,
-    //     },
-    //     console.log(" State orders ",this.state.all_buy_orders)
-    //     )
-    // }
-    // else{
-    //     this.setState=({
-    //         all_sell_orders:finalList
-    //     })
-    // }
     return finalList;
   }
   sortInfo() {
-    // console.log("here")
     let buy_info = this.state.all_buy_orders;
     let sell_info = this.state.all_sell_orders;
-    // console.log(buy_info)
     buy_info.sort(function (a, b) {
       return a["type_id"] - b["type_id"];
     });
@@ -202,13 +182,17 @@ class JitaComponent extends Component {
       return a["type_id"] - b["type_id"];
     });
     console.log("Done with sorting");
-
     this.setState({
       sorted: true,
       all_buy_orders: buy_info,
       all_sell_orders: sell_info,
     });
   }
+
+
+
+
+  
   createHTML(item) {
     let id = item.returnTypeID().toString();
     let quan = item.returnQuantity().toString();
@@ -236,7 +220,6 @@ class JitaComponent extends Component {
           }}
         >
           <img src={icon} alt={alt} width="100%" height="100%" />
-          
         </CardTitle>
         <CardText>
           <div>Id: {id}</div>
@@ -249,7 +232,6 @@ class JitaComponent extends Component {
   render() {
     let sorted = this.state.sorted;
     let trimmed = this.state.trimmed;
-    // console.log(this.state);
     if (!sorted) {
       return <div>JitaComponent</div>;
     } else {
@@ -257,13 +239,9 @@ class JitaComponent extends Component {
         return <div>Sorted Complete</div>;
       } else {
         let all_items = this.state.items;
-
-        // console.log("Amount of sellable items: ", all_items.length);
         let profitable = 0;
         const item_jsx = all_items.map((item) => {
           let item_info = item;
-          // item_info.createProfit();
-          
           if (item_info.returnTotalProfit() > 0) {
             console.log("item,",item)
             profitable++;

@@ -1,15 +1,15 @@
-    import React from 'react';
+import React from 'react';
 import './App.css';
 
-import LandingPage from "./Components/LandingPage";
-import Header from './Components/Header/'
-import Footer from './Components/Footer/';
+import Main from "./Components/Main";
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className='full-page'>    
+    <div className='full-page'>
       <Header/>
-      <LandingPage/>
+      <Main/>
       <Footer/>
     </div>
   );

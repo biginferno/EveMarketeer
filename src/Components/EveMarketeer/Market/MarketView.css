@@ -1,0 +1,40 @@
+.marketview{
+    color: red;
+    border: 2px solid gold;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 5%;
+    padding: 2%;
+    position: relative;
+    
+    /* overflow: hidden; */
+}
+.itemlist{
+    background-color: rgb(211, 208, 208);
+    display: absolute;
+    border: 2px solid red;
+    width: 50%;
+    height: 100%;
+    margin-right: 5%;
+    float: left;
+}
+
+.statistics{
+    background-color: rgb(211, 208, 208);
+    position: relative;
+    border: 2px solid green;
+    width: 40%;
+    height: 40%;
+    float: right;
+    margin-bottom: 5%;
+}
+
+.freighterhaul{
+    background-color: rgb(211, 208, 208);
+    position: relative;
+    border: 2px solid purple;
+    width: 40%;
+    height: 40%;
+    float: right;
+    /* padding-right: 5%; */
+}

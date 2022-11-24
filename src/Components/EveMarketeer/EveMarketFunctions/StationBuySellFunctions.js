@@ -16,7 +16,7 @@ const axios = require("axios").default;
 export function trimmingFunction(all_buy_orders, buy_station_id, all_sell_orders, sell_station_id) {
   //Grab Sell orders and Buy Orders for each ID and create an Item Object
   let item_list = [];
-  console.log("Trimming", all_buy_orders, all_sell_orders)
+  // console.log("Trimming", all_buy_orders, all_sell_orders)
 
   while (all_sell_orders.length > 0) {
     
@@ -91,11 +91,13 @@ export function trimmingFunction(all_buy_orders, buy_station_id, all_sell_orders
     }
     if (current_buy_orders.length > 0 && current_sell_orders.length > 0) {
       // console.log("Making Item for ", current_id)
-      item_list.push(
-        new Item(current_id, current_buy_orders, current_sell_orders)
-      );
-    } else {
-    }
+      const new_item = new Item(current_id, current_buy_orders, current_sell_orders)
+
+      if (new_item.returnTotalProfit() > 0) {
+        // console.log("Pushing Item: ", current_id);
+        item_list.push(new_item)
+      };
+    } 
   }
   return item_list;
 }
@@ -135,3 +137,17 @@ export function sortInfo(orders) {
   console.log("Done with sorting", orders);
   return orders
 }
+
+export function sortItems(trimmedItems) {
+
+  trimmedItems.sort((a, b) =>{
+    return b.returnTotalProfit() - a.returnTotalProfit()
+  })
+
+  const total_profit = trimmedItems.map(item => item.total_profit).reduce((a, b) => a + b, 0)
+  const total_m3 = trimmedItems.map(item => item.quantity).reduce((a, b) => a + b, 0)
+
+  console.log(total_profit, total_m3)
+  return[ trimmedItems, total_profit, total_m3];
+}
+

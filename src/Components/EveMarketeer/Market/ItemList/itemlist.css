@@ -1,0 +1,53 @@
+.itemlist {
+    /* background-color: rgb(211, 208, 208); */
+    position: relative;
+    border: 3px solid black;
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    width: 250px;
+    flex: 1 0 auto;
+    height: 200px;
+    border: 2px solid rgb(187, 65, 187); 
+    /* background: rgb(187, 65, 187); */
+    /* margin: 0 10px; */
+    /* max-width: 24.5%; */
+}
+
+.card-title {
+    /* height: auto; */
+    color: #fff;
+    /* background: linear-gradient(to  right, blue, rgb(187, 65, 187));    height: 100%; */
+    justify-content: center;
+    align-items: center;
+}
+.item-image {
+    width:auto;
+    height:auto;
+
+}
+.card-text {
+
+}
+
+/* 
+Original ItemList 
+
+.itemlist {
+    background-color: rgb(211, 208, 208);
+    position: relative;
+    border: 2px solid red;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+*/

@@ -1,5 +1,5 @@
-.marketview{
-    color: red;
+.marketview {
+    /* color: red; */
     border: 2px solid gold;
     max-width: 100%;
     height: 100vh;
@@ -9,32 +9,19 @@
     
     /* overflow: hidden; */
 }
-.itemlist{
-    background-color: rgb(211, 208, 208);
-    display: absolute;
-    border: 2px solid red;
+
+.loading {
+    margin: 0 25%;
+    margin-top: 5vh;
+    max-height:25vh;
     width: 50%;
-    height: 100%;
-    margin-right: 5%;
-    float: left;
+    color: white;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
 }
-
-.statistics{
-    background-color: rgb(211, 208, 208);
-    position: relative;
-    border: 2px solid green;
-    width: 40%;
-    height: 40%;
-    float: right;
-    margin-bottom: 5%;
-}
-
-.freighterhaul{
-    background-color: rgb(211, 208, 208);
-    position: relative;
-    border: 2px solid purple;
-    width: 40%;
-    height: 40%;
-    float: right;
-    /* padding-right: 5%; */
+.loading h1 {
+    padding: 10%;
+    color: white;
 }

@@ -1,9 +1,10 @@
 import React from "react";
-
-function FreighterHaul(){
+import './freighterhaul.css'
+function FreighterHaul(...props){
+    console.log("Freighter Props:", props)
     return(
-        <div>
-            FreighterHaul
+        <div className="freighterhaul">
+            
         </div>
     )
 }

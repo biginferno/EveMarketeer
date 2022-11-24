@@ -81,7 +81,7 @@ class JitaComponent extends Component {
       //next_buy_id will be the front of our buy_orders array
       //(1) if next_buy_id < current_id then we have don't have buy orders at sell_location and need to remove until we are up to or past our current_id
       //(2) if these two are equal, we push until the next_buy_id doesn't equal current_id i.e we have a different item
-      //(3) if next_buy_id > current_id, we don't have any
+      //(3) if next_buy_id > current_id, we don't have any orders of current sell orders
       //(4) if we have have no more orders we are done with this function
 
       //Option 4
@@ -198,7 +198,7 @@ class JitaComponent extends Component {
     let quan = item.returnQuantity().toString();
     let profit = item.returnTotalProfit();
     const icon = `https://images.evetech.net/types/${id}/icon`;
-    console.log("Making HTML for:", item)
+    // console.log("Making HTML for:", item)
     const alt = `eve id ${id}`;
     return (
       <Card

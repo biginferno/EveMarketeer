@@ -7,6 +7,7 @@ export default class Item {
     this.info = [0, 0];
     this.quantity = 0;
     this.total_profit = 0;
+    
 
     this.init = () => {this.createProfit()};
     this.init();
@@ -44,6 +45,8 @@ function profit_quantity_calculator(jita_sellable, amarr_buyable) {
     return a["price"] - b["price"];
   });
   amarr_buyable.sort(function (a, b) {
+    // console.log("Higher Sell", b["price"])
+    // console.log("Lower Sell", a["price"])
     return b["price"] - a["price"];
   });
   // console.log(length_amarr)

@@ -10,7 +10,7 @@
     "eve-swagger": "^0.3.3",
     "express": "^4.17.1",
     "mongoose": "^5.9.22",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-mdl": "^2.1.0",

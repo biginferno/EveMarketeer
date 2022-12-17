@@ -1,13 +1,10 @@
 .marketview {
-    /* color: red; */
     border: 2px solid gold;
     max-width: 100%;
     height: 100vh;
     margin: 0 5%;
     padding: 2%;
     position: relative;
-    
-    /* overflow: hidden; */
 }
 
 .loading {

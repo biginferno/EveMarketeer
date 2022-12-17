@@ -118,7 +118,7 @@ export async function getAllMarketOrders(region, type) {
   });
   while (currentPage <= pages) {
     // console.log(`Starting ${type} process with ${pages - currentPage} left`);
-    let region_orders = `https://esi.evetech.net/v1/markets/${region}/orders/?datasource=tranquility&order_type=${type}&page=${currentPage}`;
+    region_orders = `https://esi.evetech.net/v1/markets/${region}/orders/?datasource=tranquility&order_type=${type}&page=${currentPage}`;
     await axios.get(region_orders).then((json) => {
       for (let k in Object.keys(json.data)) {
         finalList.push(json.data[k]);

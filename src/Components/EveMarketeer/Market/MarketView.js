@@ -15,7 +15,6 @@ import FreighterHaul from "./FreighterHaul/freighterhaul";
 import {stations, freighters} from './Market'
 
 import {trimmingFunction, getAllMarketOrders, sortInfo, sortItems} from "../EveMarketFunctions/StationBuySellFunctions";
-import JitaComponent from "../Stations/Jita";
 
 
 function MarketView(...props) {

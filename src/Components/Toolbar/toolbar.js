@@ -18,7 +18,6 @@ export default function Toolbar(props) {
         options.sell_station = e.target.value
     }
     const setFreighter = (e) =>{
-        // console.log("Changed Freighter")
         console.log("Changed Freighter", e.target.value)
         options.freighter = e.target.value
     }

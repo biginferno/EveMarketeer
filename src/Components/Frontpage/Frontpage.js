@@ -1,12 +1,16 @@
 import React from "react";
-import './Frontpage.css'
-import space3 from '../../Images/space3.jpg'
-import space2 from '../../Images/space2.jpg'
-import space1 from '../../Images/background.jpg'
+import './frontpage.css'
+import space3 from '../../Assets/space3.jpg'
+import space2 from '../../Assets/space2.jpg'
+import space1 from '../../Assets/background.jpg'
 
 function Frontpage() {
 
     return(
+        <>
+        <div className="miniabout">
+        
+        </div>
         <div className="frontpage">
             <a href="/market" className="panel">
   
@@ -26,6 +30,8 @@ function Frontpage() {
             </a>
             
         </div>
+        </>
+        
     );
 }
 

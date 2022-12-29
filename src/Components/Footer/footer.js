@@ -1,17 +1,9 @@
 import React  from 'react';
-
+import './footer.css'
 
 function Footer(){
     return(
-        <div style={{
-            "textAlign":"center", 
-            "height":"15%", 
-            "display":"flex", 
-            "alignItems":"center", 
-            "justifyContent":"center", 
-            "color": "white"
-            // "backgroundColor":"red"
-        }}>
+        <div className='footer'>
             <h4>Project built by Ryan Romero</h4>
         </div>
     );

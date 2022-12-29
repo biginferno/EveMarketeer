@@ -28,7 +28,7 @@ function MarketView(...props) {
     
     const sell_info = stations[props[0].options.sell_station];
     const freighter = freighters[props[0].options.freighter];
-
+    
     console.log("sell info:",typeof(props[0].options.buy_station));
 
     //Order Info
@@ -147,14 +147,7 @@ function MarketView(...props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[buy_orders.isBuyLoaded, sell_orders.isSellLoaded, items.isTrimmed])
 
-    // TODO: 
-    // (Completed) TEST JITA TO AMARR MARKET PROFIT
-    // Create Cards/Table forItemList
-    // Pass Statistic Info to Statistics function
-    // Calculate optimal Freighter Haul
-    // Create refresh functionality
-    // Style components
-    // Cleanup code(lmao yea right)
+
     
     if(buy_orders.isBuyLoaded && sell_orders.isSellLoaded && items.isTrimmed) {
         return(

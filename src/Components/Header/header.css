@@ -1,19 +1,20 @@
 .eve-logo{
     /* background-color: #5b4695; */
     /* border-bottom: 2px solid black; */
-    height: 25%;
+    height: 10vh;
     display:flex;
     align-items: center;
     justify-content: center;
     color:white;
-    font-size: 60px;
-    background-image: url("../../Images/space3.jpg");
+    font-size: 30px;
+    background-image: url("../../Assets/background.jpg");
+    margin-bottom: 100;
 }
 
 h1{
         text-shadow:
         0.em 0 red,
-        0 0.07em blue,
-        -0.07em 0 green,
-        0 -0.07em white;
+        0 0.05em blue,
+        -0.05em 0 green,
+        0 -0.05em white;
 }

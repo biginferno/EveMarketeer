@@ -4,6 +4,8 @@ import Market from "./EveMarketeer/Market/Market";
 import EveIndex from './EveIndex/EveIndex'
 import About from './About/About'
 import { useRoutes } from "react-router-dom";
+
+//Routes for Eve Marketeer and Eve-Index
 function Routes() {
         let routes = useRoutes([
             {

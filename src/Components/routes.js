@@ -1,6 +1,6 @@
 import React from "react";
 import Frontpage from './Frontpage/frontpage'
-import Market from "./EveMarketeer/Market/Market";
+import Market from "./EveMarketeer/Market/market";
 import EveIndex from './EveIndex/EveIndex'
 import About from './About/About'
 import { useRoutes } from "react-router-dom";

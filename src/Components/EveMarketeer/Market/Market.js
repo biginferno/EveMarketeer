@@ -1,6 +1,6 @@
-// Market takes the user inputs buyStation, sellStation, freighter from Toolbar
-// and passes the correlating information to MarketView that will provide the views
-// from the data MarketCalculator provides
+// 
+// 
+// 
 
 import React, {useEffect, useState} from "react";
 import axios from "axios";
@@ -11,8 +11,8 @@ import MarketView from './MarketView'
 function Market() {
     const [regionInfo, setRegionInfo] = useState({
         initialLode: false,
-        jitaOrders: {},
-        amarrOrders: {}
+        buyOrders: {},
+        sellOrders: {}
     })
     const [options, setOptions] = useState({});
 
@@ -33,8 +33,8 @@ function Market() {
 
             setRegionInfo({
                 initialLode: true,
-                jitaOrders: allRegions.data.jitaOrders,
-                amarrOrders: allRegions.data.amarrOrders
+                buyOrders: allRegions.data.buyOrders,
+                sellOrders: allRegions.data.sellOrders
             })
         }
         grabAllRegionInfo()

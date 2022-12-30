@@ -163,7 +163,8 @@ function MarketView(...props) {
         return(
             <div className="loading">
                 <h1>Loading Information</h1>
-            </div>)
+            </div>
+        )
         
     }
 
